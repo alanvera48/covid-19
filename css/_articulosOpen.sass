@@ -1,0 +1,93 @@
+
+.art1Abierto
+	height: auto
+	margin: 30px
+	padding: 55px 30px 30px 30px
+	+flexRowCenter()
+	flex-wrap: wrap
+	cursor: pointer
+	.contenedorArt1
+		width: 350px
+		height: 300px
+		padding: 10px
+		margin: 5px
+		border-radius: 10px
+		background: rgba(252, 252, 252, 0.7)
+		border:  2px solid rgba(0,0,0,0.20)
+		transition: all 0.2s ease-in-out
+		&:hover
+			border:  2px solid rgba(66, 127, 218, 0.6)
+		.divInfortivos
+			p
+				font-size: 12px
+	.estadisticas
+		width: 400px
+		height: 300px
+		+flexColumnCenter
+		padding: 5px
+		.divInformativoeEstadisticas
+			+flexColumnCenter()
+			div
+				margin: 0px 0	
+			.primeraFila
+				border-top: 2px solid rgba(0,0,0,0.20)
+				+flexColumnStartStart()
+				.informacionFila
+					+flexRowCenterRow()
+			.segundaFila
+				border-top: 2px solid rgba(0,0,0,0.20)
+				+flexColumnStartStart()
+				.informacionFila
+					+flexRowCenterRow()
+			.terceraFila
+				border-top: 2px solid rgba(0,0,0,0.20)
+				+flexColumnStartStart()
+				.informacionFila
+					+flexRowCenterRow()
+				.fila1Division
+					+flexColumnStartStart()
+					padding: 3px
+					margin-right: 10px
+					.subtituloFila
+						font-size: 15px
+						color: #A09B9B
+					.infoFilas
+						font-size: 20px
+						color: #000000
+					
+			
+			
+.comentarios
+	+flexColumnCenter()
+	height: auto
+	text-align: center
+	position: relative
+	padding: 30px
+	.cajaComentarios
+		+flexColumnCenter()
+		.comentariosCentral
+			+flexRowCenter()
+			text-align: center
+			flex-wrap: wrap
+			.comentario1
+				margin: 10px
+				width: 300px
+				height: 150px
+				padding: 8px
+				border-radius: 10px
+				+flexColumnStartStart()
+	.caja
+		+flexColumnCenter()
+		form
+			+flexColumnCenter()
+			input
+				margin: 10px 0
+				width: 400px
+			textarea
+				height: 200px
+				width: 400px
+
+
+
+	
+

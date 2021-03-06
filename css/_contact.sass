@@ -1,0 +1,48 @@
+
+.contact
+	background: rgb(191,188,238)
+	background: linear-gradient(90deg, rgba(191,188,238,0.9202556022408963) 0%,rgba(144,148,237,1) 100%, rgba(20,194,229,1) 100%)
+	width: 100%
+	height: 100vh
+	+flexColumnCenter()
+	text-align: center
+	padding: 30px
+	.titleContacto 
+		span
+			font-size: 50px
+			font-weight: bold
+			color: #FFFFFF
+	form
+		+flexColumnSpaceBetCenter()
+		width: 500px
+		height: 300px
+		padding: 10px
+		label
+			+flexColumnStartStart()
+			font-size: 15px
+			margin-top: 10px
+			input
+				width: 400px
+				height: auto
+				border: none
+				outline: none
+				border-radius: 5px
+				padding: 5px
+				&:placeholder
+					color: rgba(94, 88, 88, 0.40)
+			textarea
+				height: 100px
+				width: 400px
+				height: auto
+				border: none
+				outline: none
+				border-radius: 5px
+				padding: 5px
+				&:placeholder
+					color: rgba(94, 88, 88, 0.40)
+
+
+footer
+	width: 100%
+	height: 60px
+	+flexColumnCenter()

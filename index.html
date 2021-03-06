@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Covid-Info</title>
+	<meta http-equiv="Expires" content="0">
+	<meta name="covid19" content="informacion covid-19 coronavirus">
+  	<meta http-equiv="Last-Modified" content="0">
+  	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  	<meta http-equiv="Pragma" content="no-cache">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<div class="">
+		<header class="header">
+			<div class="table-register">
+					<button class="btn btn-light login ">
+						Login
+					</button>
+					<div class="loger">
+						<div class="loger-pop">
+							<div class="cerrar">
+								<a href="#" id="close-loger"><i class="far fa-times-circle"></i></a>
+							</div>
+							<form action="./php/login.php" method="POST" class="" id='formLogin'>
+								<input type="text" placeholder="User / Email" name="userLog">
+								<input type="password" placeholder="Password" name="passLog">
+								<div class="loginError text-danger">
+									
+								</div>
+								<button class="btn btn-dark login" type="submit" name="login">Login
+								</button>
+							</form>
+						</div>
+					</div>
+					<button class="btn btn-light login register">
+						<i class="fas fa-sign-in-alt"> </i>
+						Sign in
+					</button>
+					<div class="popupregister">
+						<div class="loger-pop">
+							<div class="cerrar">
+								<a href="#" id="close"><i class="far fa-times-circle"></i></a>
+							</div>
+							<form action="" method="POST" class="formRegister">
+								<input type="text" placeholder="Full Name" name="nombre" class="nombreInputRegister nombreDelRegistro">
+								<input type="text" placeholder="User Name" name="usuario" class="nombreInputRegister">		
+								<input type="mail" placeholder="Email" name="email" class="nombreInputRegister">
+								<input type="password" placeholder="Password" name="password" class="nombreInputRegister">
+								<input class="btn btn-dark login" type="submit" value="Sign in" name="sigin">
+								<div class="usererror text-success"></div>
+							</form>
+						</div>
+					</div>	
+			</div>
+			<div class="title">
+				<h1 class="">Covid-19</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#art1" ><i class="fas fa-home"></i></a></li>
+					<li><a href="#art2" ><i class="fas fa-newspaper"></i></a></li>
+					<li><a href="#Cuidados" ><i class="fas fa-info"></i></a></li>
+					<li><a href="#contact" ><i class="fas fa-id-card-alt"></i></a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div class="art1 articulos" id="art1">
+			<div class="boxArt1">
+				<h4>Toda la informacion sobre Covid 19</h4>
+				<div class="textArt1">
+					<p>Toda la informacion que necesitas saber el virus del Covid-19, desde los tratamientos, cuidados y prevencion, a todos los articulos actualizados de noticias de todo el pais. Ademas podras leer nuestros articulos, escritos por nuestros especialistas:</p>
+					<ul class="ulArt1">
+						<li><i class="fas fa-arrow-circle-right"></i><a href="./php/articles.html">¿Que es el virus del Covid-19?</a></li>
+						<li><i class="fas fa-arrow-circle-right"></i><a href="./php/articles.html">Origen del coronavirus</a></li>
+						<li><i class="fas fa-arrow-circle-right"></i><a href="./php/articles.html">Cambios Mundiales</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="imagesIcons">
+				<div class="imageCovid">
+					<img src="css/Imagenes/Covid/fiebreImage.png" alt="sintomas fiebre covid">
+				</div>	
+				<div class="imageCovid">
+					<img src="css/Imagenes/Covid/coffingImage.png" alt="sintomas tos covid">
+				</div>
+				<div class="imageCovid">
+					<img src="css/Imagenes/Covid/washingImange.png" alt="prevencion covid lavar manos">
+				</div>
+				<div class="imageCovid">
+					<img src="css/Imagenes/Covid/barbijoImage.png" alt="barbijo covid">
+				</div>
+			</div>
+		</div>
+		<div class="art2 " id="art2">
+			<div class="cubConteiner move">	
+
+			</div>	
+		</div>	
+		<div class="art3 " id="Cuidados">
+			<div class="centerCuidados move ">
+				<div class="centro">	
+					<div class="sliderCentro">
+						<div class="divisionSelecionada selecion1">
+							<h2>Sintomas</h2>
+							<div class="intSintomas">
+								<p>La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.</p>
+							</div>
+							<div class="descripcionSintomas">	
+									<div class="sintomasHabituales">
+										<span>Los síntomas más habituales son los siguientes:</span>
+										<div class="listaSintomas1">
+											<ul class="listInformacion">
+												<li><span>Fiebre</span></li>
+												<li><span>Tos seca</span></li>
+												<li><span>Cansacio</span></li>
+											</ul>
+										</div>
+									</div>
+									<div class="sintomasNohabituales">
+										<span>Otros síntomas menos comunes son los siguientes:</span>
+										<div class="listaSintomas1">
+											<ul>
+												<li><span>Molestias y dolores</span></li>
+												<li><span>Dolor de garganta</span></li>
+												<li><span>Diarrea</span></li>
+												<li><span>Conjuntivitis</span></li>
+												<li><span>Dolor de cabeza</span></li>
+												<li><span>Pérdida del sentido del olfato o del gusto</span></li>
+												<li><span>Erupciones cutáneas o pérdida del color en los dedos de las manos o de los pies.</span></li>
+											</ul>
+										</div>
+									</div>
+									<div class="iconSintomas ICON1">
+										<img class="imagenIcon" src="css/Imagenes/Covid/fiebreImage.png" alt="sintomas fiebre covid">	
+									</div>
+								
+							</div>
+						</div>
+						<div class="divisionSelecionada selecion2">
+							<div class="titleSintomas">
+								<h2>Prevencion</h2>
+							</div>
+							<div class="descripcionSintomas">
+								<div class="sintomasHabituales">
+									<span>Para evitar la propagación de la COVID-19:</span>
+									<div class="listaSintomas1">
+										<ul class="listInformacion">
+											<li><span>Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de alcohol.</span></li>
+											<li><span>Mantén una distancia de seguridad con personas que tosan o estornuden.</span></li>
+											<li><span>Utiliza mascarilla cuando no sea posible mantener el distanciamiento físico.</span></li>
+											<li><span>Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.</span></li>
+											<li><span>En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica.</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sintomasNohabituales">
+									<span>Llama por teléfono antes de acudir a cualquier proveedor de servicios sanitarios para que te dirijan al centro médico adecuado. De esta forma, te protegerás a ti y evitarás la propagación de virus y otras infecciones.</span>
+
+									<div class="listaSintomas1">
+										<ul>
+											<li><span>*120 (Telefono gratuito) </span></li>
+											<li><span>Escribí "Hola" (sin comillas) al número +54 9 11 2256-0566 y comenzá a chatear.</span></li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="iconSintomas ICON2">
+									<img class="imagenIcon" src="css/Imagenes/Covid/coffingImage.png" alt="sintomas fiebre covid">	
+								</div>
+							</div>
+						</div>
+						<div class="divisionSelecionada selecion3">
+							<div class="titleSintomas">
+								<h2>Tratamiento</h2>
+							</div>
+							<div class="intSintomas">
+								<p>Si se siente enfermo debe descansar, beber mucho líquido y comer alimentos nutritivos. Permanezca en una habitación separada de los demás miembros de la familia y utilice un baño exclusivamente para usted si es posible. Limpie y desinfecte frecuentemente las superficies que toque.</p>
+							</div>
+							<div class="descripcionSintomas">
+								<div class="intSintomas">
+									<p>Si se siente enfermo debe descansar, beber mucho líquido y comer alimentos nutritivos. Permanezca en una habitación separada de los demás miembros de la familia y utilice un baño exclusivamente para usted si es posible. Limpie y desinfecte frecuentemente las superficies que toque.</p>
+								</div>
+								<div class="sintomasNohabituales">
+									<span>Tratamientos médicos:</span>
+									<div class="intSintomas">
+										<p>Si tiene síntomas leves y, por lo demás, está sano, aíslese y póngase en contacto con su proveedor de atención médica o con una línea de información sobre la COVID‑19 para recibir asesoramiento.
+										Solicite atención médica si tiene fiebre, tos y dificultad para respirar. Llame con antelación.</p>
+									</div>
+								</div>
+							
+							</div>
+							<div class="iconSintomas ICON3">
+								<img class="imagenIcon" src="css/Imagenes/Covid/family.png" alt="sintomas fiebre covid">	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="divisiones">
+					<div class="sintomas divCuidados division1 ">
+						<div class="informacion">
+							<div class="divCubos">
+								Sintomas
+							</div>
+						</div>
+					</div>
+					<div class="prevencion divCuidados division2">
+						<div class="informacion">
+							<div class="divCubos">
+								Prevencion 
+							</div>
+						</div> 
+					</div>
+					<div class="tratamiento divCuidados division3">
+						<div class="informacion">
+							<div class="divCubos ">
+								Tratamiento 
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+
+
+		</div>	
+
+		<div class="contact " id="contact" >
+			<div class="titleContacto">
+				<span class="move">Podes enviarnos tus consultas, llenando los siguientes campos:</span>
+			</div>
+			<div class="form move">
+				<form action="../Sesiones/php/enviarcorreo.php" method="POST" id="formulario">
+					<label class=""><input type="text" class="text-dark" name="nombreContacto" value="" placeholder="Nombre"></label>
+					<label class=""><input type="email" class="text-dark" name="emailContacto" value="" placeholder="Email"></label>
+					<label class=""><input type="text" class="text-dark" name="subject" value="" placeholder="Asunto"></label>
+					<label class=""><textarea name="mensaje" class="text-dark" placeholder="Texto"></textarea></label>
+					<label class=""><input type="submit" class="btn btn-dark" name="" value="Send"></label>
+				</form>
+			</div>
+
+
+		</div>
+		<footer class="bg-dark">
+			<p class="text-white">Desarrollado y creado como practica autodidacta de Alan Vera</p>
+		</footer>
+	</div>
+	<script src="./js/index2.js"></script>
+	<script src="./js/noticias.js"></script>
+	<script src="./js/slider.js"></script>
+</body>
+</html>

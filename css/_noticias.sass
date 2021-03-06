@@ -1,0 +1,77 @@
+.centroNoticias
+	padding: 100px 10px 10px 10px
+	background: url('../css/Imagenes/Covid/buenos.jpg')
+	background-repeat: no-repeat
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	+flexColumnCenter()
+	h5
+		font-size: 50px
+		font-weight: bold
+		color: #6c757d
+	.noticias
+		width: 100%
+		display: flex
+		flex-flow: row
+		justify-content: start
+		align-items: start
+		grid-gap: 10px
+		flex-basis: auto
+		flex-wrap: wrap
+		border-radius: 10px
+		.cuboNoticias
+			margin: 20px
+			border-radius: 10px
+			width: 350px
+			height: 500px
+			padding: 20px
+			overflow-y: scroll
+			flex-shrink: 3
+			display: flex
+			flex-direction: column
+			justify-content: start
+			align-items: center
+			background: rgba(255, 255, 255, 0.8)
+			border-bottom: 2px solid $backColor-box 
+			border-top: 2px solid $backColor-box
+			&::-webkit-scrollbar
+				background: transparent
+				width: 5px
+			&::-webkit-scrollbar-thumb
+				background: #97F2C4
+				border-radius: 5px
+				&:hover
+					box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2)
+			h3
+				font-size: 25px
+				margin: 5px
+				text-align: center
+			.descripcionNoticia
+				text-align: center	
+				font-size: 15px
+				color: #343a40
+				margin: 10px 5px
+				p
+					img
+						width: 180px
+				a
+					text-decoration: none
+					color: $color-primario
+
+			.imagenNoticia
+				width: 180px
+				margin: 10px 5px
+			.bottonInfo
+				display: flex
+				justify-content: end
+				align-items: end
+				font-size: 12px
+				margin: 10px 5px
+
+
+
+
+
+
+

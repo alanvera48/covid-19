@@ -1,0 +1,265 @@
+<?php 
+		
+
+	
+
+	session_start();
+
+	$varsession = $_SESSION['usuario'];
+
+	if ($varsession == null || $varsession == " ") {
+		header('location:../index.php');
+
+	}else{  };
+
+
+	error_reporting(0);
+
+
+
+	include 'conexion.php';
+
+	
+
+	//Consulta de comentarios
+	
+	$conBD = mysqli_query($conex,"SELECT * FROM comentarios");
+
+
+
+
+ ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Covid-Info</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<div class="contenedor">
+		<header class="header">
+			<div class="table-register">
+				<?php if ($varsession == null || $varsession == " ") {?>
+					
+				<?php }else{ ?>
+
+				<button class="btn btn-light login ">
+					<?php echo $_SESSION['user'];?>
+					<i class="fas fa-user-circle"></i>
+				</button>
+				<button class="btn btn-light">
+					<a class="" href="cerrarsesion.php">
+						<i class="fas fa-sign-out-alt"></i>
+					</a>
+				</button>
+
+			</div>
+
+			<div class="title">
+				<h1 >Covid-19</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="../index.html" ><i class="fas fa-home"></i></a></li>
+					<li><a href="../index.html" ><i class="fas fa-map-marked-alt"></i></a></li>
+					<li><a href="../index.html" ><i class="fas fa-info"></i></a></li>
+					<li><a href="../index.html" ><i class="fas fa-id-card-alt"></i></a></li>
+				</ul>
+			</nav>
+
+			<?php }?>
+		</header>
+
+		<div class="art1Abierto " id="art1">
+			<?php if ($varsession == null || $varsession == " ") {?>
+
+			<?php }else {?>
+
+				
+			<div class="contenedorArt1">
+				<div class="h1-art1Abierto">
+					<h5 class="text-secondary">¿Que es el Coronavirus?</h5>
+				</div>
+				<hr>
+				<div class="divInfortivos">
+					<p>El coronavirus es un grupo de virus que causan enfermedades que van desde el resfriado común hasta enfermedades más graves como neumonía, síndrome respiratorio de Oriente Medio (MERS) y síndrome respiratorio agudo grave (SARS). <br>
+					Cabe destacar que la cepa de coronavirus (2019-nCoV) que ha causado el brote en China es nueva y no se conocía previamente.
+					</p>				
+				</div>
+		
+			</div>
+
+			<div class="contenedorArt1">
+				<div class="h1-art1Abierto">
+					<h5 class="text-secondary">¿Que es la Covid-19?</h5>
+				</div>
+				<hr>
+				<div class="divInfortivos">
+					<p>La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. 
+					<br>
+					Ambos eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.</p>
+				</div>
+		
+			</div>
+
+			<div class="contenedorArt1">
+				<div class="h1-art1Abierto">
+					<h5 class="text-secondary">Como se origino el Coronavirus?</h5>
+				</div>
+				<hr>
+				<div class="divInfortivos">
+					<p>
+					El 31 de diciembre de 2019, la Organización Mundial de la Salud (OMS) recibió reportes de presencia de neumonía, de origen desconocido, en la ciudad de Wuhan, en China. Rápidamente, a principios de enero, las autoridades de este país identificaron la causa como una nueva cepa de coronavirus. La enfermedad ha ido expandiéndose hacia otros continentes como Asia, Europa y América. 
+					<br> <br>
+					En cuanto a su comienzo, todavía no se ha confirmado el posible origen animal de la COVID-19. </p>
+				</div>
+		
+			</div>
+
+			<div class="contenedorArt1">
+				<div class="h1-art1Abierto">
+					<h5 class="text-secondary">¿Que es la cuarentena y que papel juega en la prevencion de la Covi-19?</h5>
+				</div>
+				<hr>
+				<div class="divInfortivos">
+					<p>Es la separación y restricción de movimientos impuesta a una persona que puede haber estado en contacto con una fuente de infección pero que no tiene síntomas. <br>
+					El objetivo de la cuarentena es lograr que, en el caso de que la persona se hubiera infectado, no transmita a su vez la infección a otros. La realización de cuarentena sólo tiene sentido para aquellas enfermedades que se pueden transmitir durante el periodo asintomático, es decir, antes de que la persona muestre síntomas de enfermedad.
+					</p>
+				</div>
+			</div>
+
+
+			<div class="contenedorArt1 estadisticas">
+				<div >
+					<h5 class="text-secondary">Estadisticas</h5>
+				</div>
+
+				<div class="divInformativoeEstadisticas">
+					<div class="primeraFila">
+						<div class="tituloDivision">
+							Provincia de Buenos Aires
+						</div>
+
+						<div class="informacionFila">
+							<div class="fila1Division">
+								<div class="subtituloFila">Total de casos</div>
+								<div class="infoFilas">804 K</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Personas recuperadas</div>
+								<div class="infoFilas">90 k</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Muertes</div>
+								<div class="infoFilas">24,638</div>
+							</div>
+						</div>	
+					</div>
+					<div class="segundaFila">
+						<div class="tituloDivision">
+							<span></span>
+							<span>Argentina</span>
+						</div>
+
+						<div class="informacionFila">
+							<div class="fila1Division">
+								<div class="subtituloFila">Total de casos</div>
+								<div class="infoFilas">1.93 K</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Personas recuperadas</div>
+								<div class="infoFilas">1.72 M</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Muertes</div>
+								<div class="infoFilas">47,974</div>
+							</div>
+						</div>
+							
+					</div>
+					<div class="terceraFila">
+
+						<div class="tituloDivision">
+							<span><i class="fas fa-globe"></i></span>
+							<span>Todos los paises</span>	
+						</div>
+
+						<div class="informacionFila">
+							<div class="fila1Division">
+								<div class="subtituloFila">Total de casos</div>
+								<div class="infoFilas">103 M</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Personas recuperadas</div>
+								<div class="infoFilas">57.3 M</div>
+							</div>
+							<div class="fila1Division">
+								<div class="subtituloFila">Muertes</div>
+								<div class="infoFilas">2.24 M</div>
+							</div>
+						</div>
+							
+					</div>
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+				<?php }?>
+
+		
+
+
+		<div class="comentarios bg-dark" id="comentarios">
+			<div class="cajaComentarios">
+				<h5 class="display-3 text-secondary">Comentarios</h5>
+				<div class="comentariosCentral">
+
+					<?php while ($row = mysqli_fetch_assoc($conBD)) { ?>
+
+
+					<div class="comentario1 bg-light text-dark">
+						<span class="nombre text-warning"><?php echo $row['nombre'] ?></span>
+						<div class="textComentario"><?php echo $row['comentario']?></div>
+					</div>
+	
+
+					
+					<?php	}  ?>
+
+				</div>
+			</div>
+			<div class="caja ">
+				<form action="" class="formComentarios" method="POST">
+					<input type="text" name="nombreComentario" placeholder="Nombre" class="inputComentario">
+					<textarea type="text" name="textoComentario" 
+					placeholder="Comentario" 
+					class="text-dark textareaComentario">
+					</textarea>
+
+					<input type="submit" name="sendComentario" value="Send" class="btn btn-secondary text-gray-dark inputBton">
+					<div class="avisoComentario text-danger "></div>
+				</form>
+			</div>
+		</div>
+		<footer class="bg-dark">
+			<p class="text-white">Desarrollado y creado como practica autodidacta de Alan Vera</p>
+		</footer>
+	</div>
+	<script src="../js/articulosTrans.js"></script>
+	<script src="../js/form2.js"></script>
+	<script src="../js/login.js"></script>
+	<script src="../js/indexarticulos.js"></script>
+	<script src="../js/comentariosJS.js"></script>
+</body>
+</html>
